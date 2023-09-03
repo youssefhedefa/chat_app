@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 
 class MyRoutes
 {
+  static const kLogIn = '/LogIn';
   static const kSignIn = '/SignIn';
 
 
@@ -14,6 +15,9 @@ class MyRoutes
         return MaterialPageRoute(builder: (context) => const LogInView(),);
       case kSignIn:
         return MaterialPageRoute(builder: (context) => const RegisterView(),);
+      case kLogIn:
+        return MaterialPageRoute(builder: (context) => const LogInView(),);
+
     }
 
 

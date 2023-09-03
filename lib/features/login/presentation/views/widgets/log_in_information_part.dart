@@ -1,11 +1,10 @@
 import 'package:chat_app/core/utils/my_assets.dart';
 import 'package:chat_app/core/utils/my_routes.dart';
 import 'package:chat_app/core/utils/widgets/welcom_panel_text.dart';
+import 'package:chat_app/features/signin/presentation/view/widgets/custom_form.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'custom_material_button.dart';
 import 'custom_social_media_container.dart';
-import 'custom_text_form_field.dart';
 
 class LogInInformationPart extends StatelessWidget {
   const LogInInformationPart({Key? key}) : super(key: key);
@@ -23,29 +22,22 @@ class LogInInformationPart extends StatelessWidget {
               height: 50.h,
             ),
           ),
-          Form(
-            child: Column(
-              mainAxisSize: MainAxisSize.max,
-              children: [
-                CustomTextFormField(
-                  label: 'Email',
-                  keyboardType: TextInputType.emailAddress,
-                  onChanged: (value) {},
-                ),
-                CustomTextFormField(
-                  label: 'Password',
-                  keyboardType: TextInputType.visiblePassword,
-                  onChanged: (value) {},
-                ),
-                const SizedBox(
-                  height: 24,
-                ),
-                CustomMaterialButton(
-                  label: 'Log In',
-                  onPressed: () {},
-                ),
-              ],
-            ),
+          CustomForm(
+            buttonLabel: 'Log In',
+            emailValidator: (value) {
+              if (value!.isEmpty) {
+                return 'email is required';
+              }
+              return null;
+            },
+            passwordValidator: (value) {
+              if (value!.isEmpty) {
+                return 'password is required';
+              }
+              return null;
+            },
+            viewName: 'log in',
+
           ),
           const Expanded(
               child: SizedBox(

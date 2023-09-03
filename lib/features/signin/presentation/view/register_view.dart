@@ -9,7 +9,9 @@ class RegisterView extends StatelessWidget {
   Widget build(BuildContext context) {
     return const Scaffold(
       resizeToAvoidBottomInset: false,
-      body: BackGroundPart(child: RegistrationInformation(),),
+      body: BackGroundPart(
+        child: RegistrationInformation(),
+      ),
     );
   }
 }
