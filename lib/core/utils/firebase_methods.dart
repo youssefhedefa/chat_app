@@ -37,7 +37,7 @@ class FireBaseMethods
 
   static void showSuccessMessageToLogIn(BuildContext context){
     showSnackBar(context, 'Success');
-    //Navigator.pushNamed(context, MyRoutes.kLogIn);
+    Navigator.pushNamed(context, MyRoutes.kHome);
   }
 
 }
