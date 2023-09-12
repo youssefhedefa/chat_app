@@ -28,7 +28,7 @@ class MyApp extends StatelessWidget {
           onGenerateRoute: MyRoutes.generateRoute,
           debugShowCheckedModeBanner: false,
           theme: ThemeData(
-            colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+            colorScheme: ColorScheme.fromSeed(seedColor: Colors.blueAccent),
             useMaterial3: true,
           ).copyWith(
               textTheme: GoogleFonts.robotoTextTheme(),
