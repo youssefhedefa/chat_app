@@ -12,7 +12,7 @@ class CustomChatItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const Padding(
-      padding:EdgeInsets.only(left: 22,right: 20,),
+      padding:EdgeInsets.only(left: 22,right: 20,bottom: 18,top: 18),
       child: SizedBox(
         height: 68,
         width: double.infinity,

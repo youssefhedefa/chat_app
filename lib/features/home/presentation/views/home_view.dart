@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'widgets/chat_item.dart';
+import 'widgets/custom_chat_list.dart';
 import 'widgets/custom_divider.dart';
 import 'widgets/custom_search_bar.dart';
 
@@ -29,11 +29,11 @@ class HomeView extends StatelessWidget {
             ),
             CustomDivider(),
             CustomSearchBar(),
-            CustomChatItem(),
-            //Tray()
+            CustomChatsList(),
           ],
         ),
       ),
     );
   }
 }
+
