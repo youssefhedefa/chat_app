@@ -13,11 +13,12 @@ class CustomChatsList extends StatelessWidget {
       child: ListView.separated(
         physics: const BouncingScrollPhysics(),
         scrollDirection: Axis.vertical,
-        itemBuilder: (context, index) => GestureDetector(
-          onTap: ()
+        itemBuilder: (context, index) => MaterialButton(
+          onPressed: ()
           {
             Navigator.pushNamed(context, MyRoutes.kChat);
           },
+          padding: const EdgeInsets.all(0),
             child: const CustomChatItem(),
         ),
         separatorBuilder: (context, index) => const CustomDivider(),
