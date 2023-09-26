@@ -9,7 +9,11 @@ class ReceivedChatBubble extends StatelessWidget {
     return Align(
       alignment: AlignmentDirectional.centerEnd,
       child: Container(
-        width: MediaQuery.of(context).size.width * 0.75,
+        //width: MediaQuery.of(context).size.width * 0.75,
+        constraints: BoxConstraints(
+          maxWidth: MediaQuery.of(context).size.width * 0.75,
+        ),
+
         margin: const EdgeInsets.all(16),
         decoration: const BoxDecoration(
           color: Color.fromRGBO(118, 143, 172, 1),
