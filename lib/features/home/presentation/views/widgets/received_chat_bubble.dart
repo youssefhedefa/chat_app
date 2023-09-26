@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 
 class ReceivedChatBubble extends StatelessWidget {
-  const ReceivedChatBubble({Key? key}) : super(key: key);
+  const ReceivedChatBubble({Key? key, required this.message}) : super(key: key);
+  final String message;
 
   @override
   Widget build(BuildContext context) {
@@ -19,9 +20,9 @@ class ReceivedChatBubble extends StatelessWidget {
           ),
         ),
         child: Container(
-          margin: const EdgeInsets.all(10),
-          child: const Text(
-            'Hi Hi Hi Hi Hi Hi Hi Hi Hi Hi Hi Hi Hi Hi Hi Hi Hi Hi Hi Hi Hi Hi Hi Hi Hi Hi Hi Hi Hi Hi Hi Hi Hi Hi Hi Hi Hi Hi Hi Hi Hi Hi Hi Hi Hi Hi Hi Hi Hi Hi Hi Hi Hi Hi Hi Hi Hi Hi ',
+          margin: const EdgeInsets.all(16),
+          child: Text(
+              message,
           ),
         ),
       ),
