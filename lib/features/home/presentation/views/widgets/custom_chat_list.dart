@@ -12,7 +12,6 @@ class CustomChatsList extends StatelessWidget {
   Widget build(BuildContext context) {
     return Expanded(
       child: ListView.separated(
-        reverse: true,
         physics: const BouncingScrollPhysics(),
         scrollDirection: Axis.vertical,
         itemBuilder: (context, index) => MaterialButton(

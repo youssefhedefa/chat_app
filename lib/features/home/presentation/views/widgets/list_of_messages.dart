@@ -27,10 +27,13 @@ class ListOfChatBubbles extends StatelessWidget {
             if (messages[index].email == email) {
               return SenderChatBubble(
                 message: messages[index].message,
+                date:  messages[index].date,
               );
             } else {
               return ReceivedChatBubble(
                 message: messages[index].message,
+                date:  messages[index].date,
+
               );
             }
           },

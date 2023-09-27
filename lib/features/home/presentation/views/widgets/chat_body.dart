@@ -27,6 +27,7 @@ class ChatBody extends StatelessWidget {
                 {
                   messages.add(MessageModel.fromJson(snapshot.data!.docs[i]));
                 }
+                //messages.sort((a, b) => a.date.compareTo(b.date));
                 return  ListOfChatBubbles(messages : messages,email: email,);
               }
               else

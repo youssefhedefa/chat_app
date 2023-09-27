@@ -20,15 +20,19 @@ class CustomTextField extends StatelessWidget {
           top: 16,
           bottom: 12,
         ),
-        child: SizedBox(
-          height: 50,
+        child: Container(
+          constraints:const BoxConstraints(
+            minHeight: 50
+          ),
           child: TextField(
+            maxLines: null, // Set maxLines to null or any value greater than 1
+            // keyboardType: TextInputType.multiline,
+            // textInputAction: TextInputAction.newline,
             controller: cCubit.textController,
             focusNode: cCubit.focusNode,
             onSubmitted: (message) {
               submittedButton(cCubit);
             },
-
             decoration: InputDecoration(
               border: OutlineInputBorder(borderRadius: BorderRadius.circular(20)),
               suffixIcon: Row(

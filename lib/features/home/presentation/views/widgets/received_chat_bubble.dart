@@ -1,11 +1,15 @@
 import 'package:flutter/material.dart';
+import 'package:intl/intl.dart';
 
 class ReceivedChatBubble extends StatelessWidget {
-  const ReceivedChatBubble({Key? key, required this.message}) : super(key: key);
+  const ReceivedChatBubble({Key? key, required this.message, required this.date}) : super(key: key);
   final String message;
+  final String date;
 
   @override
   Widget build(BuildContext context) {
+    DateTime dateTime = DateTime.parse(date);
+
     return Align(
       alignment: AlignmentDirectional.centerEnd,
       child: Container(
@@ -25,8 +29,18 @@ class ReceivedChatBubble extends StatelessWidget {
         ),
         child: Container(
           margin: const EdgeInsets.all(16),
-          child: Text(
-              message,
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            mainAxisSize: MainAxisSize.min,
+            children: [
+              Text(message),
+              Align(
+                alignment: Alignment.bottomRight,
+                child: Text(
+                  DateFormat('HH:mm:ss').format(dateTime),
+                ),
+              ),
+            ],
           ),
         ),
       ),
