@@ -12,7 +12,7 @@ class CustomChatItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const Padding(
-      padding:EdgeInsets.only(left: 22,right: 20,bottom: 18,top: 18),
+      padding:EdgeInsets.only(left: 20,right: 20,bottom: 18,top: 18),
       child: SizedBox(
         height: 68,
         width: double.infinity,
@@ -20,7 +20,7 @@ class CustomChatItem extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             PersonPic(),
-            SizedBox(width: 16,),
+            SizedBox(width: 14,),
             Padding(
               padding: EdgeInsets.only(top: 8.0,bottom: 8),
               child: Column(

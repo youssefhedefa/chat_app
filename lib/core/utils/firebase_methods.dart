@@ -18,7 +18,7 @@ class FireBaseMethods
       email: email,
       password: password,
     ); //credential
-    showSuccessMessageToLogIn(context);
+    showSuccessMessageToLogIn(context,email);
   }
 
 
@@ -35,9 +35,9 @@ class FireBaseMethods
     Navigator.pushNamed(context, MyRoutes.kLogIn);
   }
 
-  static void showSuccessMessageToLogIn(BuildContext context){
+  static void showSuccessMessageToLogIn(BuildContext context,String email){
     showSnackBar(context, 'Success');
-    Navigator.pushNamed(context, MyRoutes.kHome);
+    Navigator.pushNamed(context, MyRoutes.kHome, arguments: email);
   }
 
 }

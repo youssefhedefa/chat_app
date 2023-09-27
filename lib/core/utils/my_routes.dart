@@ -23,9 +23,11 @@ class MyRoutes
       case kLogIn:
         return MaterialPageRoute(builder: (context) => const LogInView(),);
       case kHome:
-        return MaterialPageRoute(builder: (context) => const HomeView(),);
+        var arg = settings.arguments as String ;
+        return MaterialPageRoute(builder: (context) => HomeView(email: arg),);
       case kChat:
-        return MaterialPageRoute(builder: (context) => const ChatView(),);
+        var arg = settings.arguments as String ;
+        return MaterialPageRoute(builder: (context) => ChatView(email: arg),);
 
 
     }

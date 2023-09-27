@@ -1,19 +1,21 @@
+
 import 'package:flutter/material.dart';
 import 'widgets/custom_chat_list.dart';
 import 'widgets/custom_divider.dart';
 import 'widgets/custom_search_bar.dart';
 
 class HomeView extends StatelessWidget {
-  const HomeView({Key? key}) : super(key: key);
+  const HomeView({Key? key, required this.email}) : super(key: key);
 
+  final String email;
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
+    return Scaffold(
       body: SafeArea(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Padding(
+            const Padding(
               padding: EdgeInsets.only(
                 top: 8.0,
                 left: 20,
@@ -27,9 +29,9 @@ class HomeView extends StatelessWidget {
                 ),
               ),
             ),
-            CustomDivider(),
-            CustomSearchBar(),
-            CustomChatsList(),
+            const CustomDivider(),
+            const CustomSearchBar(),
+            CustomChatsList(email: email,),
           ],
         ),
       ),

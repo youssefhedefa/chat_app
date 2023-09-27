@@ -33,7 +33,7 @@ class MyApp extends StatelessWidget {
           ).copyWith(
               textTheme: GoogleFonts.robotoTextTheme(),
           ),
-          initialRoute: '/Home',
+          initialRoute: '/',
         );
       },
     );

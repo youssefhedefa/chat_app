@@ -91,7 +91,6 @@ class LogInInformationPart extends StatelessWidget {
                   style: TextStyle(
                     color: Color(0xFF000113),
                     fontSize: 14,
-                    fontFamily: 'Roboto',
                     fontWeight: FontWeight.w500,
                   ),
                 ),
